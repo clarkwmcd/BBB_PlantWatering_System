@@ -1,3 +1,28 @@
+
+var water = false;
+
+//run setup function to configure pins on startup
+b.pinMode(pumpPin, b.OUTPUT); // set to an output so we can use it to turn on the MOSFET
+b.digitalWrite(pumpPin, b.LOW); //set to LOW so pump is not powered on start up
+b.pinMode(moisturePower, b.OUTPUT); //set 4 as an output
+b.digitalWrite(moisturePower, b.LOW); //set to LOW so sensor is not powered on start up
+
+var readSensor = new Promise(
+  function(resolve, reject) {
+    var moisturePower = "P9_30";
+    b.pinMode(moisturePower, b.OUTPUT); //set as an output
+  }
+);
+
+moistureValue = b.analogRead(moisturePin); //Read the SIG (signal) value from the sensor
+
+
+
+
+
+
+
+
 var b = require('bonescript');
 
 var pumpPin = "P8_8"; // pin that turns on the motor
